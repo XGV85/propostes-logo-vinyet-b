@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El teu logo · 5 idees — Maria Dolors Vinyet</title>
+<style>
+  :root{
+    --paper:#EFF0EA; --ink:#1C231D; --ink-soft:#55604F; --line:#D6DBCE; --chrome:#3C574C;
+    --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#12150F; --ink:#EAEDE3; --ink-soft:#A9B09F; --line:#2A2F24; --chrome:#84AD96; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+
+  header{padding:56px 0 30px;text-align:center;border-bottom:1px solid var(--line)}
+  .kicker{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chrome);
+          font-weight:600;margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,7vw,2.9rem);margin:0 0 8px;letter-spacing:-.01em}
+  .who{font-size:1.05rem;color:var(--ink-soft);margin:0 0 22px}
+  .intro{max-width:52ch;margin:0 auto 20px;font-size:1.06rem}
+  .verbadge{display:inline-flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;
+            font-size:.9rem;color:var(--ink-soft);background:color-mix(in srgb,var(--chrome) 12%,transparent);
+            border-radius:100px;padding:8px 16px}
+  .verbadge b{color:var(--ink)}
+  .verbadge a{color:var(--chrome);font-weight:600}
+
+  .opt{padding:46px 0;border-bottom:1px solid var(--line)}
+  .opt-head{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;
+       display:grid;place-items:center;font-family:var(--serif);font-size:1.4rem;font-weight:600}
+  .opt-head h2{font-family:var(--serif);font-weight:500;font-size:1.55rem;margin:0;letter-spacing:-.01em}
+  .say{margin:0 0 22px;color:var(--ink-soft);font-size:1.02rem}
+
+  /* logo gran sobre el seu paper */
+  .show{background:var(--pp);border:1px solid var(--line);border-radius:16px;padding:40px 24px;
+        display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:16px;
+        box-shadow:0 16px 40px -28px rgba(0,0,0,.55)}
+  .show .big{width:96px;height:96px;flex:none;color:var(--brand)}
+  .show .big svg{width:100%;height:100%;display:block}
+  .show .wm{display:flex;flex-direction:column;line-height:1.12;color:var(--pi)}
+  .show .wm .nm{font-size:1.7rem}
+  .show .wm .rl{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+                color:color-mix(in srgb,var(--pi) 55%,var(--pp));margin-top:7px}
+
+  .uses{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.uses{grid-template-columns:1fr}}
+  .cap{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+       margin:0 0 7px;text-align:center}
+
+  .piece{--pp:#fff;--pi:#1c1c1c;background:var(--pp);color:var(--pi);border:1px solid var(--line);
+         border-radius:11px;overflow:hidden;box-shadow:0 10px 26px -18px rgba(0,0,0,.5)}
+  .piece svg{display:block}
+  .p-mark{width:100%;height:100%;color:var(--brand)}
+
+  .mk-card{aspect-ratio:85/55;padding:16px 18px;display:flex;flex-direction:column;justify-content:space-between}
+  .mk-card .top{display:flex;align-items:center;gap:11px}
+  .mk-card .top .m{width:40px;height:40px;flex:none;color:var(--brand)}
+  .mk-card .cn{font-size:.92rem;line-height:1.15}
+  .mk-card .cr{font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;
+               color:color-mix(in srgb,var(--pi) 55%,var(--pp));margin-top:3px}
+  .mk-card .foot{font-family:var(--mono);font-size:.56rem;color:color-mix(in srgb,var(--pi) 62%,var(--pp));
+                 display:flex;flex-direction:column;gap:2px}
+
+  .mk-inv{aspect-ratio:85/55;padding:15px 16px;display:flex;flex-direction:column;gap:10px}
+  .mk-inv .ih{display:flex;justify-content:space-between;align-items:flex-start}
+  .mk-inv .ih .m{width:32px;height:32px;color:var(--brand)}
+  .mk-inv .ih .ttl{text-align:right}
+  .mk-inv .ih .ttl b{font-size:.82rem;letter-spacing:.16em}
+  .mk-inv .ih .ttl small{display:block;font-family:var(--mono);font-size:.56rem;
+       color:color-mix(in srgb,var(--pi) 55%,var(--pp));margin-top:3px}
+  .mk-inv .rows{display:flex;flex-direction:column;gap:5px;margin-top:2px}
+  .mk-inv .rows .r{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.56rem;
+       color:color-mix(in srgb,var(--pi) 66%,var(--pp))}
+  .mk-inv .rows .r.tot{color:var(--brand);font-weight:700;
+       border-top:1px solid color-mix(in srgb,var(--pi) 18%,var(--pp));padding-top:5px}
+
+  .t-campanar{font-family:var(--serif);font-weight:400;font-variant:small-caps;letter-spacing:.05em}
+  .t-rosassa{font-family:var(--serif);font-weight:400;letter-spacing:.03em}
+  .t-temple{font-family:var(--serif);font-weight:400;text-transform:uppercase;letter-spacing:.07em}
+  .t-finestra{font-family:var(--serif);font-weight:400;letter-spacing:.02em}
+  .t-arcuacions{font-family:var(--sans);font-weight:500;letter-spacing:.005em}
+
+  footer{padding:40px 0 70px;text-align:center;color:var(--ink-soft)}
+  footer .big-thanks{font-family:var(--serif);font-size:1.3rem;color:var(--ink);margin:0 0 8px}
+</style>
+</head>
+<body>
+
+<!-- marks -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="m-campanar" viewBox="0 0 100 100">
+    <path d="M38 84 V40 a12 12 0 0 1 24 0 V84" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    <line x1="31" y1="84" x2="69" y2="84" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="38" y1="58" x2="62" y2="58" stroke="currentColor" stroke-width="2.2"/>
+    <path d="M46 53 V47 a4 4 0 0 1 8 0 V53" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <line x1="50" y1="64" x2="50" y2="77" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="m-rosassa" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="33" fill="none" stroke="currentColor" stroke-width="2.6"/>
+    <circle cx="50" cy="50" r="9" fill="none" stroke="currentColor" stroke-width="2.6"/>
+    <g fill="none" stroke="currentColor" stroke-width="2.2">
+      <circle cx="70" cy="50" r="7"/><circle cx="60" cy="67.3" r="7"/><circle cx="40" cy="67.3" r="7"/>
+      <circle cx="30" cy="50" r="7"/><circle cx="40" cy="32.7" r="7"/><circle cx="60" cy="32.7" r="7"/>
+    </g>
+  </symbol>
+  <symbol id="m-temple" viewBox="0 0 100 100">
+    <path d="M27 41 L50 23 L73 41" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    <line x1="24" y1="41" x2="76" y2="41" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <line x1="31" y1="46" x2="31" y2="74"/><line x1="44" y1="46" x2="44" y2="74"/>
+      <line x1="56" y1="46" x2="56" y2="74"/><line x1="69" y1="46" x2="69" y2="74"/>
+    </g>
+    <line x1="24" y1="77" x2="76" y2="77" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="20" y1="83" x2="80" y2="83" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="m-finestra" viewBox="0 0 100 100">
+    <path d="M32 84 V46 a18 18 0 0 1 36 0 V84" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M39 84 V60 a5.5 5.5 0 0 1 11 0 V84" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M50 84 V60 a5.5 5.5 0 0 1 11 0 V84" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="50" cy="34" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="m-arcuacions" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 76 V52 a11 11 0 0 1 22 0 V76"/><path d="M42 76 V52 a11 11 0 0 1 22 0 V76"/>
+      <path d="M64 76 V52 a11 11 0 0 1 22 0 V76"/>
+    </g>
+    <line x1="16" y1="80" x2="90" y2="80" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">El teu logo · 5 idees</p>
+    <h1>Maria Dolors Vinyet</h1>
+    <p class="who">Guia turística d'Osona</p>
+    <p class="intro">Mira-les amb calma. No cal que triïs una de sola: digues al Xavier <b>quins números t'agraden</b> i quins no.</p>
+    <p class="verbadge">Estàs veient la <b>versió B · línia fina</b>. &nbsp;·&nbsp; <a href="https://xgv85.github.io/propostes-logo-vinyet-a/">Veure la versió A (línia normal) →</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="opt" style="--brand:#43535B;--pp:#F2F1EC;--pi:#262A2C">
+    <div class="opt-head"><span class="num">1</span><h2>El Campanar de Vic</h2></div>
+    <p class="say">El campanar romànic de la catedral de Vic.</p>
+    <div class="show">
+      <span class="big"><svg><use href="#m-campanar"/></svg></span>
+      <span class="wm t-campanar"><span class="nm">Maria Dolors Vinyet</span><span class="rl">Guia turística · Osona</span></span>
+    </div>
+    <div class="uses">
+      <div><p class="cap">La targeta</p>
+        <div class="piece mk-card"><div class="top"><span class="m"><svg class="p-mark"><use href="#m-campanar"/></svg></span>
+          <div><div class="cn t-campanar">Maria Dolors Vinyet</div><div class="cr">Guia turística · Osona</div></div></div>
+          <div class="foot"><span>hola@dolorsvinyet.cat · +34 6XX XXX XXX</span><span>Vic · Osona</span></div></div></div>
+      <div><p class="cap">La factura</p>
+        <div class="piece mk-inv"><div class="ih"><span class="m"><svg class="p-mark"><use href="#m-campanar"/></svg></span>
+          <div class="ttl"><b class="t-campanar">FACTURA</b><small>núm. 2026-014</small></div></div>
+          <div class="rows"><div class="r"><span>Visita guiada · Vic monumental</span><span>180,00 €</span></div>
+            <div class="r"><span>IVA 21%</span><span>37,80 €</span></div>
+            <div class="r tot"><span>Total</span><span>217,80 €</span></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="opt" style="--brand:#46396B;--pp:#F3EFE8;--pi:#262233">
+    <div class="opt-head"><span class="num">2</span><h2>La Rosassa</h2></div>
+    <p class="say">El rosetó, la finestra rodona de les esglésies.</p>
+    <div class="show">
+      <span class="big"><svg><use href="#m-rosassa"/></svg></span>
+      <span class="wm t-rosassa"><span class="nm">Maria Dolors Vinyet</span><span class="rl">Guia turística · Osona</span></span>
+    </div>
+    <div class="uses">
+      <div><p class="cap">La targeta</p>
+        <div class="piece mk-card"><div class="top"><span class="m"><svg class="p-mark"><use href="#m-rosassa"/></svg></span>
+          <div><div class="cn t-rosassa">Maria Dolors Vinyet</div><div class="cr">Guia turística · Osona</div></div></div>
+          <div class="foot"><span>hola@dolorsvinyet.cat · +34 6XX XXX XXX</span><span>Vic · Osona</span></div></div></div>
+      <div><p class="cap">La factura</p>
+        <div class="piece mk-inv"><div class="ih"><span class="m"><svg class="p-mark"><use href="#m-rosassa"/></svg></span>
+          <div class="ttl"><b class="t-rosassa">FACTURA</b><small>núm. 2026-014</small></div></div>
+          <div class="rows"><div class="r"><span>Ruta del patrimoni · esglésies</span><span>180,00 €</span></div>
+            <div class="r"><span>IVA 21%</span><span>37,80 €</span></div>
+            <div class="r tot"><span>Total</span><span>217,80 €</span></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="opt" style="--brand:#2A3A4A;--pp:#F4EFE5;--pi:#23262B">
+    <div class="opt-head"><span class="num">3</span><h2>El Temple Romà</h2></div>
+    <p class="say">El temple romà de Vic.</p>
+    <div class="show">
+      <span class="big"><svg><use href="#m-temple"/></svg></span>
+      <span class="wm t-temple"><span class="nm">Maria Dolors Vinyet</span><span class="rl" style="text-transform:uppercase">Guia turística · Osona</span></span>
+    </div>
+    <div class="uses">
+      <div><p class="cap">La targeta</p>
+        <div class="piece mk-card"><div class="top"><span class="m"><svg class="p-mark"><use href="#m-temple"/></svg></span>
+          <div><div class="cn t-temple">Maria Dolors Vinyet</div><div class="cr">Guia turística · Osona</div></div></div>
+          <div class="foot"><span>hola@dolorsvinyet.cat · +34 6XX XXX XXX</span><span>Vic · Osona</span></div></div></div>
+      <div><p class="cap">La factura</p>
+        <div class="piece mk-inv"><div class="ih"><span class="m"><svg class="p-mark"><use href="#m-temple"/></svg></span>
+          <div class="ttl"><b class="t-temple">FACTURA</b><small>núm. 2026-014</small></div></div>
+          <div class="rows"><div class="r"><span>Vic monumental · temple romà</span><span>180,00 €</span></div>
+            <div class="r"><span>IVA 21%</span><span>37,80 €</span></div>
+            <div class="r tot"><span>Total</span><span>217,80 €</span></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="opt" style="--brand:#7A3552;--pp:#F5F0E9;--pi:#2A2320">
+    <div class="opt-head"><span class="num">4</span><h2>La Finestra Romànica</h2></div>
+    <p class="say">Una finestra romànica de dos arcs.</p>
+    <div class="show">
+      <span class="big"><svg><use href="#m-finestra"/></svg></span>
+      <span class="wm t-finestra"><span class="nm">Maria Dolors Vinyet</span><span class="rl">Guia turística · Osona</span></span>
+    </div>
+    <div class="uses">
+      <div><p class="cap">La targeta</p>
+        <div class="piece mk-card"><div class="top"><span class="m"><svg class="p-mark"><use href="#m-finestra"/></svg></span>
+          <div><div class="cn t-finestra">Maria Dolors Vinyet</div><div class="cr">Guia turística · Osona</div></div></div>
+          <div class="foot"><span>hola@dolorsvinyet.cat · +34 6XX XXX XXX</span><span>Vic · Osona</span></div></div></div>
+      <div><p class="cap">La factura</p>
+        <div class="piece mk-inv"><div class="ih"><span class="m"><svg class="p-mark"><use href="#m-finestra"/></svg></span>
+          <div class="ttl"><b class="t-finestra">FACTURA</b><small>núm. 2026-014</small></div></div>
+          <div class="rows"><div class="r"><span>Museu Episcopal · art romànic</span><span>180,00 €</span></div>
+            <div class="r"><span>IVA 21%</span><span>37,80 €</span></div>
+            <div class="r tot"><span>Total</span><span>217,80 €</span></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="opt" style="--brand:#A25A34;--pp:#F6F1E8;--pi:#2A211A">
+    <div class="opt-head"><span class="num">5</span><h2>Els Porxos</h2></div>
+    <p class="say">Els porxos de la Plaça Major de Vic.</p>
+    <div class="show">
+      <span class="big"><svg><use href="#m-arcuacions"/></svg></span>
+      <span class="wm t-arcuacions"><span class="nm">Maria Dolors Vinyet</span><span class="rl">Guia turística · Osona</span></span>
+    </div>
+    <div class="uses">
+      <div><p class="cap">La targeta</p>
+        <div class="piece mk-card"><div class="top"><span class="m"><svg class="p-mark"><use href="#m-arcuacions"/></svg></span>
+          <div><div class="cn t-arcuacions">Maria Dolors Vinyet</div><div class="cr">Guia turística · Osona</div></div></div>
+          <div class="foot"><span>hola@dolorsvinyet.cat · +34 6XX XXX XXX</span><span>Vic · Osona</span></div></div></div>
+      <div><p class="cap">La factura</p>
+        <div class="piece mk-inv"><div class="ih"><span class="m"><svg class="p-mark"><use href="#m-arcuacions"/></svg></span>
+          <div class="ttl"><b class="t-arcuacions">FACTURA</b><small>núm. 2026-014</small></div></div>
+          <div class="rows"><div class="r"><span>Vic medieval · Plaça Major</span><span>180,00 €</span></div>
+            <div class="r"><span>IVA 21%</span><span>37,80 €</span></div>
+            <div class="r tot"><span>Total</span><span>217,80 €</span></div></div></div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="big-thanks">Gràcies, mama!</p>
+    <p>Quan les hagis vist, digues al Xavier quins números t'agraden.<br>
+    També pots veure la <a href="https://xgv85.github.io/propostes-logo-vinyet-a/" style="color:var(--chrome)">versió de línia normal</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
